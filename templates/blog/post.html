@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post {{ id }}</title>
+</head>
+<body>
+{% block content %}
+<p>{{ some_post.pub_date }}</p>
+<p>{{ some_post.title }}</p>
+<p>{{ some_post.text }}</p>
+<a href="{% url 'list' %}">back to the list</a>
+{% endblock %}
+</body>
+</html>
